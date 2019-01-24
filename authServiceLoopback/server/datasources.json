@@ -1,0 +1,22 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "dbService": {
+    "name": "dbService",
+    "connector": "rest",
+    "crud": true,
+    "operations": [
+      {
+        "template": {
+          "method": "GET",
+          "url": "http://localhost:5000/dbService/users"
+        },
+        "functions": {
+          "find": []
+        }
+      }
+    ]
+  }
+}

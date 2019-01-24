@@ -1,0 +1,36 @@
+{
+    "dbService": {
+        "name": "dbService",
+        "connector": "rest",
+        "crud": true,
+        "operations": [
+          {
+            "template": {
+              "method": "GET",
+              "url": "http://localhost:5000/dbService/offers"
+            },
+            "functions": {
+              "findOffers": []
+            }
+          },
+          {
+            "template": {
+              "method": "GET",
+              "url": "http://localhost:5000/dbService/alice-advisory"
+            },
+            "functions": {
+              "findAdvisory": []
+            }
+          },
+          {
+            "template": {
+              "method": "GET",
+              "url": "http://localhost:5000/dbService/{username}-debit"
+            },
+            "functions": {
+              "getDebitBalance": ["username"]
+            }
+          }
+        ]
+    }
+}
